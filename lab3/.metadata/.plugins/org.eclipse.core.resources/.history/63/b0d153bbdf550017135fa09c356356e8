@@ -1,0 +1,10 @@
+package lab3;
+
+public class GrupoDeEstudos {
+	private String tema;
+	//private conj. alunos
+	
+	public GrupoDeEstudos(String tema) {
+		this.tema = tema;
+	}
+}

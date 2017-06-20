@@ -1,0 +1,12 @@
+package lab3;
+
+public class ControleDoSistema {
+
+	public void cadastraAluno(Aluno aluno) {
+		
+	}
+	
+	public String exibeAluno(String matricula) {
+		
+	}
+}

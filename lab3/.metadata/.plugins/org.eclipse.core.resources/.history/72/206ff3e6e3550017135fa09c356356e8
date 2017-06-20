@@ -1,0 +1,17 @@
+package lab3;
+
+public class ControleDoSistema {
+	 
+	String NL = System.lineSeparator();
+	
+	public String mostraMenu() {
+		return "(C)adastrar Aluno" + NL + 
+						"(E)xibir Aluno" + NL + 
+						"(N)ovo Grupo" + NL +
+						"(A)locar Aluno no Grupo" + NL +
+						"(R)egistrar Resposta de Aluno" + NL +
+						"(I)mprimir Alunos que Responderam" + NL +
+						"(O)ra, vamos fechar o programa!" + NL +
+						"Opção>";
+	}
+}

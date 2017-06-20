@@ -1,0 +1,77 @@
+package lab3;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	String NL = System.lineSeparator();
+	Scanner scan = new Scanner(System.in);
+	ControleDoSistema controle = new ControleDoSistema();
+
+	public void run() {
+		String opcao = scan.nextLine();
+
+		switch (opcao) {
+		case "C":
+			cadastraAluno();
+			break;
+		case "E":
+			System.out.print("Matrícula: ");
+			String matricula = scan.nextLine();
+			controle.exibeAluno(matricula);
+			break;
+		
+		case "N":
+			System.out.println("Grupo: ");
+			String nomeGrupo = scan.nextLine();
+			controle.addGrupo(nomeGrupo);
+			break;
+			
+		case "A":
+			System.out.println("Matrícula: ");
+			String matricula = scan.nextLine();
+			System.out.println("Grupo: ");
+			String nomeGrupo = scan.nextLine();
+			controle.addAlunoNoGrupo(matricula, nomeGrupo);
+			break;
+		
+		case "R":
+			
+			controle.registraResposta(matricula);
+			break;
+		
+		case "I":
+			// imprimeAlunos()
+			break;
+		
+		case "O":
+			System.exit(0);
+		
+		default:
+			System.out.println("OPÇÃO INVÁLIDA!" + NL);
+		}
+	}
+	
+	public void cadastraAluno() {
+		System.out.print("Matrícula: ");
+		String matricula = scan.nextLine();
+		
+		System.out.print("Nome: ");
+		String nome = scan.nextLine();
+		
+		System.out.print("Curso: ");
+		String curso = scan.nextLine();
+
+		controle.cadastraAluno(matricula, nome, curso);
+		
+	}
+	
+	
+	public String mostraMenu() {
+		return "(C)adastrar Aluno" + NL + "(E)xibir Aluno" + NL
+				+ "(N)ovo Grupo" + NL + "(A)locar Aluno no Grupo" + NL
+				+ "(R)egistrar Resposta de Aluno" + NL
+				+ "(I)mprimir Alunos que Responderam" + NL
+				+ "(O)ra, vamos fechar o programa!" + NL + "Opção>";
+	}
+}
